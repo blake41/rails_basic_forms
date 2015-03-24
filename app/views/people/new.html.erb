@@ -3,9 +3,7 @@
   <label>What's your name</label>
   <input type="text" name="person[name]">
   <select name="person[city_id]">
-    <% City.all.each do |city| %>
-      <option value=<%= city.id %>><%= city.name %></option>
-    <% end %>
+    <%= options_for_select([["Boston", 1], ["New York City",2], ["Chicago", 3]]) %>
   </select>
   <input type="submit">
 </form>
