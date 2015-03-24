@@ -1,7 +1,5 @@
-<form action="/people" method="post">
-  <input name="authenticity_token" type="hidden" value=<%= form_authenticity_token %>>
-  <label>What's your name</label>
-  <input type="text" name="person[name]">
+<%= form_tag do %>
+  <%= label_tag("person[name]", "Name") %>
+  <%= text_field_tag("person[name]") %>
   <%= collection_select(:person, :city_id, City.all, :id, :name) %>
-  <input type="submit">
-</form>
+<% end %>
