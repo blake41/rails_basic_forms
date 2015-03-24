@@ -3,8 +3,7 @@
   <label>What's your name</label>
   <input type="text" name="person[name]">
   <select name="person[city_id]">
-    <%= cities_array = City.all.map {|city| [city.name, city.id]} %>
-    <%= options_for_select(cities_array) %>
+    <%= options_from_collection_for_select(City.all, :id, :name) %>
   </select>
   <input type="submit">
 </form>
