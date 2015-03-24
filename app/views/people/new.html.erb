@@ -2,8 +2,6 @@
   <input name="authenticity_token" type="hidden" value=<%= form_authenticity_token %>>
   <label>What's your name</label>
   <input type="text" name="person[name]">
-  <select name="person[city_id]">
-    <%= options_from_collection_for_select(City.all, :id, :name) %>
-  </select>
+  <%= collection_select(:person, :city_id, City.all, :id, :name) %>
   <input type="submit">
 </form>
