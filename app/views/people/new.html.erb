@@ -1,0 +1,6 @@
+<form action="/people" method="post">
+  <input name="authenticity_token" type="hidden" value=<%= form_authenticity_token %>>
+  <label>What's your name</label>
+  <input type="text" name="person[name]">
+  <input type="submit">
+</form>

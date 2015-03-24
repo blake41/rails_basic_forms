@@ -5,7 +5,7 @@ class PeopleController < ApplicationController
   end
 
   def create
-    
+    @person = Person.create(params[:person])
   end
 
 
